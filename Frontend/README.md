@@ -1,16 +1,39 @@
-# React + Vite
+# Amazon Clone - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for the Amazon Clone project. It is built with modern web technologies to provide a responsive, interactive, and seamless e-commerce user experience.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework**: [React 19](https://react.dev/) via [Vite](https://vitejs.dev/) for fast development and optimized builds.
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) for utility-first styling.
+- **UI Components**: [Material-UI (MUI)](https://mui.com/) for ready-to-use, accessible UI components and icons.
+- **State Management**: [Redux Toolkit](https://redux-toolkit.js.org/) for predictable and centralized global state management.
+- **Routing**: [React Router v7](https://reactrouter.com/) for seamless single-page navigation.
+- **API Calls**: [Axios](https://axios-http.com/) for making robust HTTP requests to the backend.
+- **Notifications**: [React Toastify](https://fkhadra.github.io/react-toastify/) for elegant toast notifications.
 
-## React Compiler
+## Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Before running the project, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- npm or yarn
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   This will start the Vite development server. Open the URL shown in your terminal (usually `http://localhost:5173`) in your browser to view the application.
+
+## Available Scripts
+
+- `npm run dev`: Starts the development server with Hot Module Replacement (HMR).
+- `npm run build`: Bundles the app into static files for production.
+- `npm run lint`: Runs ESLint to catch and fix code issues.
+- `npm run preview`: Previews the built production app locally.
