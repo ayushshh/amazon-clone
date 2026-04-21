@@ -11,7 +11,7 @@ const TODAYS_DEALS = [
     img: "https://m.media-amazon.com/images/I/61vWhvy+11L._AC_SY200_.jpg",
     discount: "Up to 25% off",
     label: "Deal of the Day",
-    desc: "Premium wooden office desk"
+    desc: "Premium Handkerchiefs"
   },
   {
     img: "https://m.media-amazon.com/images/I/71CEv09j+HL._SX160_QL100_AC_SCLZZZZZZZ_.jpg",
