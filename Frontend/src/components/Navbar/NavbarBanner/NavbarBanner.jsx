@@ -12,7 +12,7 @@ const NavbarBanner = () => {
         { name: "Mobiles" ,path: "/product"},
         { name: "Today's Deals" },
         { name: "Customer Service" },
-        { name: "Prime" ,path: "/cart"},
+        { name: "Prime" ,path: "/prime"},
         { name: "Electronics" },
         { name: "Home & Kitchen" },
         { name: "Fashion" }

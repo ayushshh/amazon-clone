@@ -109,27 +109,80 @@ const NavbarBelt = () => {
 
                     {/* Dropdown */}
                     {dropdownOpen && (
-                        <div className="absolute top-[50px] right-0 w-[200px] bg-white text-black shadow-xl rounded-[4px] z-50 py-2 text-[13px]">
-                            {currentUser ? (
+                        <div className="absolute top-[52px] right-0 w-[220px] bg-white text-black shadow-[0_2px_10px_rgba(0,0,0,0.2)] rounded-[4px] z-50 py-3 text-[13px]">
+
+                            {!currentUser ? (
+                                /* ── Logged-out panel ── */
                                 <>
-                                    <div className="px-4 py-2 text-[12px] text-gray-500 border-b">
-                                        Signed in as <strong>{currentUser.username}</strong>
+                                    <div className="px-[14px] pb-[12px] text-center">
+                                        <p className="text-[13px] mb-[8px]">
+                                            <span className="font-bold">Hello, </span>sign in for the best experience
+                                        </p>
+                                        <Link
+                                            to="/signin"
+                                            onClick={() => setDropdownOpen(false)}
+                                            className="block w-full text-center py-[5px] px-[10px] text-[13px] font-normal rounded-[3px] border no-underline text-black bg-gradient-to-b from-[#f7dfa5] to-[#f0c14b] border-[#a88734] shadow-[0_1px_0_rgba(255,255,255,.4)_inset] hover:from-[#f5d78e] hover:to-[#e9b920] transition-all"
+                                        >
+                                            Sign in
+                                        </Link>
+                                        <p className="text-[12px] mt-[8px]">
+                                            New customer?{' '}
+                                            <Link
+                                                to="/signup"
+                                                onClick={() => setDropdownOpen(false)}
+                                                className="text-[#007185] hover:text-[#c7511f] hover:underline no-underline font-bold"
+                                            >
+                                                Start here
+                                            </Link>
+                                        </p>
                                     </div>
-                                    <div
-                                        className="px-4 py-2 hover:bg-[#f0f2f2] cursor-pointer"
-                                        onClick={handleSignOut}
-                                    >
-                                        Sign Out
+                                    <div className="border-t border-[#e7e7e7] mx-[14px]" />
+                                    <div className="grid grid-cols-2 gap-x-[14px] pt-[10px] px-[14px]">
+                                        <div>
+                                            <p className="font-bold text-[12px] mb-[4px]">Trending</p>
+                                            <a href="#" className="block text-[12px] text-[#333] hover:text-[#c7511f] hover:underline py-[2px]">Best Sellers</a>
+                                            <a href="#" className="block text-[12px] text-[#333] hover:text-[#c7511f] hover:underline py-[2px]">New Releases</a>
+                                        </div>
+                                        <div>
+                                            <p className="font-bold text-[12px] mb-[4px]">Digital Content</p>
+                                            <a href="#" className="block text-[12px] text-[#333] hover:text-[#c7511f] hover:underline py-[2px]">Prime Video</a>
+                                            <a href="#" className="block text-[12px] text-[#333] hover:text-[#c7511f] hover:underline py-[2px]">Amazon Music</a>
+                                        </div>
                                     </div>
                                 </>
                             ) : (
+                                /* ── Logged-in panel ── */
                                 <>
-                                    <Link to="/signin" className="block px-4 py-2 hover:bg-[#f0f2f2] no-underline text-black">
-                                        Sign In
-                                    </Link>
-                                    <Link to="/signup" className="block px-4 py-2 hover:bg-[#f0f2f2] no-underline text-black">
-                                        Create Account
-                                    </Link>
+                                    <div className="px-[14px] pb-[10px] border-b border-[#e7e7e7]">
+                                        <p className="text-[13px] font-bold leading-tight">
+                                            Hello, {currentUser.name.split(' ')[0]}
+                                        </p>
+                                        <p className="text-[11px] text-[#555]">{currentUser.username}</p>
+                                    </div>
+                                    <div className="grid grid-cols-2 gap-x-[14px] pt-[10px] px-[14px]">
+                                        <div>
+                                            <p className="font-bold text-[12px] mb-[4px]">Account</p>
+                                            <a href="#" className="block text-[12px] text-[#333] hover:text-[#c7511f] hover:underline py-[2px]">Your Account</a>
+                                            <a href="#" className="block text-[12px] text-[#333] hover:text-[#c7511f] hover:underline py-[2px]">Your Orders</a>
+                                            <a href="#" className="block text-[12px] text-[#333] hover:text-[#c7511f] hover:underline py-[2px]">Your Wishlist</a>
+                                        </div>
+                                        <div>
+                                            <p className="font-bold text-[12px] mb-[4px]">Shopping</p>
+                                            <Link
+                                                to="/cart"
+                                                onClick={() => setDropdownOpen(false)}
+                                                className="block text-[12px] text-[#333] hover:text-[#c7511f] hover:underline py-[2px] no-underline"
+                                            >Your Cart</Link>
+                                            <a href="#" className="block text-[12px] text-[#333] hover:text-[#c7511f] hover:underline py-[2px]">Buy Again</a>
+                                        </div>
+                                    </div>
+                                    <div className="border-t border-[#e7e7e7] mx-[14px] mt-[8px]" />
+                                    <button
+                                        onClick={handleSignOut}
+                                        className="w-full text-left px-[14px] py-[8px] text-[13px] text-[#333] hover:text-[#c7511f] hover:bg-[#f0f2f2] transition-colors"
+                                    >
+                                        Sign Out
+                                    </button>
                                 </>
                             )}
                         </div>

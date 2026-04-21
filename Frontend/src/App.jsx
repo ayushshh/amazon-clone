@@ -5,6 +5,7 @@ import Product from "./screen/Products/Product";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Cart from "./screen/Cart/Cart";
 import { SignIn, SignUp } from "./components/Auth/auth";
+import Prime from "./screen/Prime/Prime";
 
 // Hide Navbar and Footer on auth pages
 const AuthLayout = ({ children }) => {
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/cart"    element={<Cart />} />
         <Route path="/signin"  element={<SignIn />} />
         <Route path="/signup"  element={<SignUp />} />
+        <Route path="/prime"   element={<Prime />} />
       </Routes>
     </AuthLayout>
   );
