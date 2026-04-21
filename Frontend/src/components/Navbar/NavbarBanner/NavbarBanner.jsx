@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 const NavbarBanner = () => {
     // Array of menu items as demonstrated in the video [00:12:46]
@@ -8,10 +9,10 @@ const NavbarBanner = () => {
         { name: "Amazon miniTV" },
         { name: "Sell" },
         { name: "Best Sellers" },
-        { name: "Mobiles" },
+        { name: "Mobiles" ,path: "/product"},
         { name: "Today's Deals" },
         { name: "Customer Service" },
-        { name: "Prime" },
+        { name: "Prime" ,path: "/cart"},
         { name: "Electronics" },
         { name: "Home & Kitchen" },
         { name: "Fashion" }
@@ -32,12 +33,12 @@ const NavbarBanner = () => {
                 {/* Dynamic Mapping of Options [00:13:28] */}
                 <div className="flex items-center">
                     {options.map((item, index) => (
-                        <div 
+                        <Link to={item.path} 
                             key={index} 
                             className="p-[8px] text-[14px] font-medium cursor-pointer border border-transparent hover:border-white hover:rounded-[3px] whitespace-nowrap"
                         >
                             {item.name}
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
